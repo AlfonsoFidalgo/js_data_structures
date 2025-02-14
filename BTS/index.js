@@ -34,4 +34,14 @@ class BinarySearchTree {
       }
     }
   }
+
+  print(current, separator = "-") {
+    if (!current) {
+      return;
+    }
+    console.log(`${separator} ${current.value}`);
+    separator += "-";
+    this.print(current.left, separator);
+    this.print(current.right, separator);
+  }
 }
