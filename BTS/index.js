@@ -49,6 +49,26 @@ class BinarySearchTree {
     return false;
   }
 
+  BFS(fn) {
+    let queue = [this.root];
+    while (queue.length) {
+      let current = queue.shift();
+      fn(current);
+      if (current.left) queue.push(current.left);
+      if (current.right) queue.push(current.right);
+    }
+  }
+
+  DFS(fn) {
+    let queue = [this.root];
+    while (queue.length) {
+      let current = queue.shift();
+      fn(current);
+      if (current.left) queue.unshift(current.left);
+      if (current.right) queue.unshift(current.right);
+    }
+  }
+
   print(current, separator = "-") {
     if (!current) {
       return;
