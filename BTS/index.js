@@ -59,6 +59,36 @@ class BinarySearchTree {
     }
   }
 
+  DFSPreOrder(fn) {
+    let current = this.root;
+    function traverse(node) {
+      fn(node);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(current);
+  }
+
+  DFSPostOrder(fn) {
+    let current = this.root;
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      fn(node);
+    }
+    traverse(current);
+  }
+
+  DFSInOrder(fn) {
+    let current = this.root;
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      fn(node);
+      if (node.right) traverse(node.right);
+    }
+    traverse(current);
+  }
+
   DFS(fn) {
     let queue = [this.root];
     while (queue.length) {
