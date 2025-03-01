@@ -10,7 +10,7 @@ This repository contains implementations of various data structures in JavaScrip
 
 The project is organized into the following directories:
 
-### Binary Search Trees (BST)
+#### Binary Search Trees (BST)
 
 The implementation of the Binary Search Tree can be found in [BTS/index.js](BTS/index.js). It includes the following methods:
 
@@ -22,7 +22,7 @@ The implementation of the Binary Search Tree can be found in [BTS/index.js](BTS/
 - `DFSInOrder(fn)`: Performs a Depth-First Search in in-order and applies the given function to each node.
 - `print(current, separator)`: Prints the tree structure starting from the given node.
 
-### Heaps (Max Binary Heap)
+#### Heaps (Max Binary Heap)
 
 The implementation of the Max Binary Heap can be found in [Heaps/index.js](Heaps/index.js). It includes the following methods:
 
@@ -31,7 +31,7 @@ The implementation of the Max Binary Heap can be found in [Heaps/index.js](Heaps
 - `bubbleUp()`: Helper method to maintain the heap property after insertion.
 - `bubbleDown()`: Helper method to maintain the heap property after extraction.
 
-### Priority Queues
+#### Priority Queues
 
 The implementation of the Priority Queue can be found in [PriorityQueues/index.js](PriorityQueues/index.js). It includes the following methods:
 
