@@ -28,4 +28,34 @@ class HashMap {
     }
     return undefined;
   }
+
+  keys() {
+    const keys = [];
+    for (let i = 0; i < this.hashmap.length; i++) {
+      const slot = this.hashmap[i];
+      if (slot) {
+        for (let j = 0; j < slot.length; j++) {
+          if (!values.includes(slot[j][0])) {
+            values.push(slot[j][0]);
+          }
+        }
+      }
+    }
+    return keys;
+  }
+
+  values() {
+    const values = [];
+    for (let i = 0; i < this.hashmap.length; i++) {
+      const slot = this.hashmap[i];
+      if (slot) {
+        for (let j = 0; j < slot.length; j++) {
+          if (!values.includes(slot[j][1])) {
+            values.push(slot[j][1]);
+          }
+        }
+      }
+    }
+    return values;
+  }
 }
